@@ -1,0 +1,38 @@
+<h1 class="ml-2 mt-3">Gantt Chart</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Progress</th>
+            <th>Dependencies</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of taskTable;let columnIndex= index">
+            <td>
+                {{data.name}}
+            </td>
+            <td>
+                {{data.start}}
+            </td>
+            <td>
+                {{data.end}}
+            </td>
+            <td>
+                {{data.progress}}
+            </td>
+            <td>
+                {{(data.dependencies ? data.dependencies :  '--') }}
+            </td>
+            <td>
+                <button (click)="addTaskToChart(data)">Add Task</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h1>Frappe Gantt Chart</h1>
+<div #gantt class="gantt"></div>

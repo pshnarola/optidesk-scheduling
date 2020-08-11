@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.gantt-container .popup-wrapper {
+    min-width: 150px;
+    padding: 5px;
+    box-shadow: 1px 3px 13px 4px rgba(153,153,153,0.75);
+    background: #fff;
+    color: #323232;
+}
+
+.gantt-container .popup-wrapper .pointer {
+    border-top-color: #fff;
+}
+
+.cc-grey g rect { fill: grey !important; }
+
+.gantt .grid-row:nth-child(even) {
+    fill: #ffffff !important;
+}
+
