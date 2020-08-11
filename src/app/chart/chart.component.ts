@@ -161,6 +161,7 @@ export class ChartComponent implements OnInit {
           this.onRemove(task);
         },
         on_date_change: (task, start, end) => {
+          console.log('---->', start, end);
           const startDate = this.formatDate(start);
           const endDate = this.formatDate(end);
           this.updateTask(startDate, endDate, task);
@@ -181,14 +182,14 @@ export class ChartComponent implements OnInit {
     let month = '' + (d.getMonth() + 1);
     let day = '' + d.getDate();
     const year = d.getFullYear();
-
+    const time = d.getHours() + ':' +  d.getMinutes() + ':' + d.getSeconds();
     if (month.length < 2) {
       month = '0' + month;
     }
     if (day.length < 2) {
       day = '0' + day;
     }
-    return year + '-' + month + '-' + day;
+    return year + '-' + month + '-' + day + ' ' + time;
   }
 
   onRemove(task) {
