@@ -3,8 +3,6 @@
     <thead>
         <tr>
             <th>Task</th>
-            <th>Start Date</th>
-            <th>End Date</th>
             <th>Progress</th>
             <th>Dependencies</th>
             <th>Action</th>
@@ -14,12 +12,6 @@
         <tr *ngFor="let data of taskTable;let columnIndex= index">
             <td>
                 {{data.name}}
-            </td>
-            <td>
-                {{data.start}}
-            </td>
-            <td>
-                {{data.end}}
             </td>
             <td>
                 {{data.progress}}
@@ -33,6 +25,36 @@
         </tr>
     </tbody>
 </table>
-<br>
+
 <h1>Frappe Gantt Chart</h1>
 <div #gantt class="gantt"></div>
+
+<hr><hr>
+<h1 class="ml-2 mt-3"> Group Table</h1>
+<table>
+    <caption>
+        Scheduling
+    </caption>
+    <col>
+    <col>
+    <colgroup span="3"></colgroup>
+    <thead>
+        <tr>
+            <th scope="col">Operation</th>
+            <th scope="col">Task</th>
+            <th scope="col">Resource</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of taskScheduling">
+            <td [attr.rowspan]="data.operationSpan" scope="rowgroup" *ngIf="data.operationSpan">{{data.operation}}</td>
+            <td scope="row">{{data.name}}</td>
+            <td>{{data.resource}}</td>
+            <button (click)="addTaskToGanttChart(data)">Add Task</button>
+        </tr>
+    </tbody>
+</table>
+<div #ganttChart class="gantt"></div>
+
+<br>
