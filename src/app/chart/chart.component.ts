@@ -145,7 +145,7 @@ export class ChartComponent implements OnInit {
       name: 'User Interface',
       operation: 'Redesign website',
       resource: 'Pratik',
-      id: 'Task 0',
+      id: 'Task 2',
       progress: 100,
       custom_class: 'cc-blue'
     },
@@ -155,10 +155,10 @@ export class ChartComponent implements OnInit {
       name: 'Applicatipn Program Interface',
       operation: 'Redesign website',
       resource: 'Mrunali',
-      id: 'Task 1',
+      id: 'Task 3',
       progress: 100,
       custom_class: 'cc-yellow',
-      dependencies: 'Task 0'
+      dependencies: 'Task 2'
     },
     {
       start: '2018-10-01 10',
@@ -166,7 +166,7 @@ export class ChartComponent implements OnInit {
       name: 'Unit Testing',
       operation: 'Testing',
       resource: 'Karishma',
-      id: 'Task 2',
+      id: 'Task 4',
       progress: 100,
       custom_class: 'cc-red',
       dependencies: 'Task 1'
@@ -177,10 +177,10 @@ export class ChartComponent implements OnInit {
       name: 'Unit Testing',
       operation: 'Testing',
       resource: 'Pankti',
-      id: 'Task 2',
+      id: 'Task 5',
       progress: 100,
       custom_class: 'cc-grey',
-      dependencies: 'Task 1'
+      dependencies: 'Task 3'
     },
     {
       start: '2018-10-01 19',
@@ -188,10 +188,10 @@ export class ChartComponent implements OnInit {
       name: 'Black Box Testing',
       operation: 'Testing',
       resource: 'Karishma',
-      id: 'Task 3',
+      id: 'Task 6',
       progress: 100,
       custom_class: 'cc-red',
-      dependencies: 'Task 2'
+      dependencies: 'Task 4'
     },
     {
       start: '2018-10-01 19',
@@ -199,10 +199,10 @@ export class ChartComponent implements OnInit {
       name: 'Black Box Testing',
       operation: 'Testing',
       resource: 'Pankti',
-      id: 'Task 3',
+      id: 'Task 7',
       progress: 100,
       custom_class: 'cc-grey',
-      dependencies: 'Task 2'
+      dependencies: 'Task 5'
     },
   ];
   ganttChart: any;
