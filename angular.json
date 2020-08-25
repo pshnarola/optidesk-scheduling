@@ -28,11 +28,11 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/frappe-gantt/dist/frappe-gantt.css",
+              "src/assets/gantt-master/dist/frappe-gantt.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/frappe-gantt/dist/frappe-gantt.min.js"
+              "src/assets/gantt-master/dist/frappe-gantt.min.js"
             ]
           },
           "configurations": {

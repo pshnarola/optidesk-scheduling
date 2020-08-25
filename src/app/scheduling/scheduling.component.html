@@ -1,0 +1,27 @@
+<h3 class="ml-2 mt-3">Shampoo Production Scheduling</h3>
+<table>
+    <caption>
+        Scheduling
+    </caption>
+    <col>
+    <col>
+    <colgroup span="3"></colgroup>
+    <thead>
+        <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Operation</th>
+            <th scope="col">Resource</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of taskScheduling">
+            <td [attr.rowspan]="data.operationSpan" scope="rowgroup" *ngIf="data.operationSpan">{{data.operation}}</td>
+            <td scope="row">{{data.name}}</td>
+            <td>{{data.resource}}</td>
+            <td [attr.rowspan]="data.operationSpan" scope="rowgroup" *ngIf="data.operationSpan"> 
+            <button (click)="addTask(data)">Add Task</button> </td>
+        </tr>
+    </tbody>
+</table>
+<div #ganttChart class="gantt"></div>

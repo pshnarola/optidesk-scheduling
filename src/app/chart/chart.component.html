@@ -1,4 +1,4 @@
-<h1 class="ml-2 mt-3">Gantt Chart</h1>
+<!-- <h1 class="ml-2 mt-3">Gantt Chart</h1>
 <table>
     <thead>
         <tr>
@@ -27,10 +27,72 @@
 </table>
 
 <h1>Frappe Gantt Chart</h1>
-<div #gantt class="gantt"></div>
+<div #gantt class="gantt"></div> -->
 
-<hr><hr>
-<h1 class="ml-2 mt-3"> Group Table</h1>
+<!-- <h3 class="ml-2 mt-3">Shampoo Production Scheduling</h3>
+<table>
+    <thead>
+        <tr>
+            <th>MatNo</th>
+            <th>LocNo</th>
+            <th>Week</th>
+            <th>Order Qty</th>
+            <th>OrderUOM</th>
+            <th>Task</th>
+            <th>Operation</th>
+            <th>Resource</th>
+            <th>Time</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of scheduling;let columnIndex= index">
+            <td>
+                {{data.matNo}}
+            </td>
+            <td>
+                {{data.locNo}}
+            </td>
+            <td>
+                {{data.week}}
+            </td>
+            <td>
+                {{data.orderQty}}
+            </td>
+            <td>
+                {{data.orderUOM}}
+            </td>
+            <td>
+                {{data.task}}
+            </td>
+            <td>
+                {{data.operation}}
+            </td>
+            <td>
+                {{data.resNo}}
+            </td>
+            <td>
+                {{data.time}}
+            </td>
+            <td>
+                {{data.start}}
+            </td>
+            <td>
+                {{data.end}}
+            </td>
+            <td>
+                <button (click)="add(data)">Add Task</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div #chart class="gantt"></div> -->
+
+<br><hr>
+
+<h3 class="ml-2 mt-3">Website Development Scheduling</h3>
 <table>
     <caption>
         Scheduling
@@ -51,10 +113,11 @@
             <td [attr.rowspan]="data.operationSpan" scope="rowgroup" *ngIf="data.operationSpan">{{data.operation}}</td>
             <td scope="row">{{data.name}}</td>
             <td>{{data.resource}}</td>
-            <button (click)="addTaskToGanttChart(data)">Add Task</button>
+            <td [attr.rowspan]="data.operationSpan" scope="rowgroup" *ngIf="data.operationSpan"> 
+                <button (click)="addTask(data)">Add Task</button> </td>
+            <!-- <button (click)="addTaskToGanttChart(data)">Add Task</button> -->
         </tr>
     </tbody>
 </table>
 <div #ganttChart class="gantt"></div>
-
 <br>

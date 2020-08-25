@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChartComponent } from './chart/chart.component';
+import { SchedulingComponent } from './scheduling/scheduling.component';
 
 
 const routes: Routes = [
@@ -9,8 +10,12 @@ const routes: Routes = [
     component: ChartComponent
   },
   {
+    path: 'scheduling',
+    component: SchedulingComponent
+  },
+  {
     path: '',
-    redirectTo: 'chart',
+    redirectTo: 'scheduling',
     pathMatch: 'full'
   }
 ];
